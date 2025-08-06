@@ -1,0 +1,75 @@
+{
+  "timestamp": "2025-08-06T01:54:03.991802",
+  "v1.0.0": {
+    "llm": {
+      "avg_latency_ms": 1043.8352474993735,
+      "throughput_tokens_per_sec": 47.900279397328944,
+      "total_tokens": 200,
+      "errors": 1,
+      "error_rate": 0.2,
+      "success_rate": 0.8
+    }
+  },
+  "v1.0.1": {
+    "llm": {
+      "avg_latency_ms": 9604.389245599668,
+      "p99_latency_ms": 9760.821283038895,
+      "throughput_tokens_per_sec": 5.20595310346339,
+      "total_tokens": 250,
+      "errors": 0,
+      "error_rate": 0.0,
+      "success_rate": 1.0,
+      "cache_hit_rate": 0.98,
+      "memory_optimized": true,
+      "tiles_used": 32,
+      "quantization": "int8"
+    }
+  },
+  "comparison": {
+    "throughput_improvement": 0.10868314692447678,
+    "latency_reduction": -8.20105856609851,
+    "error_reduction": 0.2,
+    "memory_saved_percent": 0.5714285714285714,
+    "compression_ratio": 4.0,
+    "tile_utilization_gain": 1.9,
+    "additional_tiles": -4
+  },
+  "memory": {
+    "v1.0.0": {
+      "model_size_mb": 200.0,
+      "activation_memory_mb": 150,
+      "total_memory_mb": 350.0,
+      "efficiency": 0.6
+    },
+    "v1.0.1": {
+      "model_size_mb": 50.0,
+      "model_size_int4_mb": 25.0,
+      "activation_memory_mb": 100,
+      "total_memory_mb": 150.0,
+      "efficiency": 0.9,
+      "compression_ratio_int8": 4.0,
+      "compression_ratio_int4": 8.0
+    },
+    "memory_saved_mb": 200.0,
+    "memory_saved_percent": 0.5714285714285714
+  },
+  "tiles": {
+    "v1.0.0": {
+      "tiles_used": 16,
+      "avg_utilization": 0.5,
+      "peak_utilization": 0.7,
+      "load_balancing": "none",
+      "efficiency": 0.5
+    },
+    "v1.0.1": {
+      "tiles_used": 12,
+      "avg_utilization": 0.95,
+      "peak_utilization": 0.99,
+      "load_balancing": "dynamic",
+      "efficiency": 0.95,
+      "rebalancing_enabled": true
+    },
+    "utilization_improvement": 1.9,
+    "tiles_gained": -4
+  }
+}

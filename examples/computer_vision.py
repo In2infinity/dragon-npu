@@ -11,7 +11,7 @@ from pathlib import Path
 
 sys.path.append(str(Path(__file__).parent.parent))
 
-import dragon_npu_core as dnpu
+from dragon_npu import dragon_npu_core as dnpu
 
 class NPUVisionProcessor:
     """Computer vision processing on NPU"""
