@@ -11,7 +11,7 @@ Quick Start:
     >>> output = model.run(input_data)
 """
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __author__ = "DragonNPU Team"
 
 # Core imports
@@ -36,10 +36,18 @@ from .dragon_npu_compiler import (
     CompilerOptions,
 )
 
-# Integration imports
-from .npu_driver_integration import (
-    NPUDriverIntegration,
-    get_npu_integration,
+# Integration imports (optional)
+try:
+    from .npu_driver_integration import (
+        NPUDriverIntegration,
+        get_npu_integration,
+    )
+except ImportError:
+    NPUDriverIntegration = None
+    get_npu_integration = None
+
+# Import test functions from core
+from .dragon_npu_core import (
     test_npu,
     benchmark_npu,
     monitor_npu,

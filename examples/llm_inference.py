@@ -12,8 +12,8 @@ from pathlib import Path
 # Add parent directory to path
 sys.path.append(str(Path(__file__).parent.parent))
 
-import dragon_npu_core as dnpu
-from dragon_npu_compiler import compile_model
+from dragon_npu import dragon_npu_core as dnpu
+from dragon_npu.dragon_npu_compiler import compile_model
 
 class NPULLMInference:
     """LLM inference on NPU"""
